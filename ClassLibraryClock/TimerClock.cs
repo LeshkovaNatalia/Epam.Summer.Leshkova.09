@@ -82,7 +82,10 @@ namespace ClassLibraryLogicClock
         /// <param name="e">Stores information that is sent receivers of event notice.</param>
         private void OnTimer(TimerEventArgs e)
         {
-            Timer?.Invoke(this, e);
+            EventHandler<TimerEventArgs> temp = Timer;
+
+            if (temp != null)
+                temp(this, e);
         }
 
         /// <summary>
