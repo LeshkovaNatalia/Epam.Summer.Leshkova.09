@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLogicGenericBin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryBinarySearchNUnit", "ClassLibraryBinarySearchNUnit\ClassLibraryBinarySearchNUnit.csproj", "{340CFFD4-321A-4591-8215-4D59AB167DD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryLogicBookListService", "ClassLibraryLogicBookListService\ClassLibraryLogicBookListService.csproj", "{40738145-7676-43E6-9AD6-D8448E4DEFF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationUIBookListService", "ConsoleApplicationUIBookListService\ConsoleApplicationUIBookListService.csproj", "{C2993556-6C13-41CE-9996-C71C91A72450}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{340CFFD4-321A-4591-8215-4D59AB167DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{340CFFD4-321A-4591-8215-4D59AB167DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{340CFFD4-321A-4591-8215-4D59AB167DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40738145-7676-43E6-9AD6-D8448E4DEFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40738145-7676-43E6-9AD6-D8448E4DEFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40738145-7676-43E6-9AD6-D8448E4DEFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40738145-7676-43E6-9AD6-D8448E4DEFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2993556-6C13-41CE-9996-C71C91A72450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2993556-6C13-41CE-9996-C71C91A72450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2993556-6C13-41CE-9996-C71C91A72450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2993556-6C13-41CE-9996-C71C91A72450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
