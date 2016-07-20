@@ -6,9 +6,10 @@ using NLog;
 
 namespace ClassLibraryLogicBookListService
 {
-    public class BookListService : BinaryBookListStorage
+    public class BookListService
     {
         #region Fields
+        private readonly BinaryBookListStorage _binaryStorage;
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private List<Book> _booksList;
         #endregion
@@ -34,6 +35,11 @@ namespace ClassLibraryLogicBookListService
         public BookListService(List<Book> books)
         {
             BookList = books;
+        }
+
+        public BookListService(BinaryBookListStorage storage)
+        {
+            _binaryStorage = storage;
         }
 
         #endregion
