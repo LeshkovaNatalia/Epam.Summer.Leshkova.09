@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassLibraryLogicBook;
+using ClassLibraryLogicBooks;
 using ClassLibraryLogicBookListService;
 
 namespace ConsoleApplicationUIBookListService
@@ -49,6 +49,18 @@ namespace ConsoleApplicationUIBookListService
 
             foreach (var book in listService.BookList)
                 Console.WriteLine(book);
+
+            //XmlBookListStorage
+
+            BookListService.StoreBooks(new XmlBookListStorage("books.xml"), books.ToList());
+
+            List<Book> loadBooks = BookListService.LoadBooks(new XmlBookListStorage("books.xml"));
+
+            //SerializationBookListStorage
+
+            BookListService.StoreBooks(new SerializationBookListStorage("books.bin"), books.ToList());
+
+            List<Book> loadBooksBin = BookListService.LoadBooks(new SerializationBookListStorage("books.bin"));
 
             Console.ReadLine();
         }

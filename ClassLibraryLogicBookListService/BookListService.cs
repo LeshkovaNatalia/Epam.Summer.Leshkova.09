@@ -1,4 +1,4 @@
-﻿using ClassLibraryLogicBook;
+﻿using ClassLibraryLogicBooks;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +9,6 @@ namespace ClassLibraryLogicBookListService
     public class BookListService
     {
         #region Fields
-        private readonly BinaryBookListStorage _binaryStorage;
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private List<Book> _booksList;
         #endregion
@@ -37,19 +36,14 @@ namespace ClassLibraryLogicBookListService
             BookList = books;
         }
 
-        public BookListService(BinaryBookListStorage storage)
-        {
-            _binaryStorage = storage;
-        }
-
         #endregion
 
         #region Public Methods
 
         /// <summary>
-        /// Method AddBook add book in list of books
+        /// Method AddBook add book in list of books.
         /// </summary>
-        /// <param name="book"></param>
+        /// <param name="book">Added book.</param>
         public void AddBook(Book book)
         {
             bool isExist = false;
@@ -110,6 +104,26 @@ namespace ClassLibraryLogicBookListService
                 logger.Error(new ArgumentException(nameof(comparison)), "Cannot sort book by tag!");
 
             books.Sort(comparison);
+        }
+
+        /// <summary>
+        /// Method StoreBooks for storing list of books.
+        /// </summary>
+        /// <param name="bookStorage">Storage parameter.</param>
+        /// <param name="books">List of books.</param>
+        public static void StoreBooks(IBookListStorage bookStorage, List<Book> books)
+        {
+            bookStorage.SaveBooks(books);
+        }
+
+        /// <summary>
+        /// Method LoadBooks for load books from storage.
+        /// </summary>
+        /// <param name="bookStorage">Storage of books.</param>
+        /// <returns></returns>
+        public static List<Book> LoadBooks(IBookListStorage bookStorage)
+        {
+            return bookStorage.LoadBooks();
         }
 
         #endregion
